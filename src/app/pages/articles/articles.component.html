@@ -10,8 +10,9 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>NOM</th>
-                    <th>PRIX</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +20,11 @@
                     <td>{{article.id}}</td>
                     <td>{{article.nom}}</td>
                     <td>{{article.prix}}</td>
+                    <td class="actions" >
+                        <button type="button" (click)="detail(article.id)" class="btn btn-primary" ><i class="fa-solid fa-eye"></i></button>
+                        <button type="button" (click)="update(article.id)" class="btn btn-success" ><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button type="button" (click)="delete(article.id)" class="btn btn-danger" ><i class="fa-solid fa-trash"></i></button>
+                    </td>
                 </tr>
             </tbody>
         </table>        
