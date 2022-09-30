@@ -8,6 +8,9 @@ import { ArticlesComponent } from './pages/articles/articles.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailArticleComponent } from './pages/detail-article/detail-article.component';
+import { AddArticleComponent } from './pages/add-article/add-article.component';
+import { UpdateArticleComponent } from './pages/update-article/update-article.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { DetailArticleComponent } from './pages/detail-article/detail-article.co
     ArticlesComponent,
     ContactComponent,
     HomeComponent,
-    DetailArticleComponent
+    DetailArticleComponent,
+    AddArticleComponent,
+    UpdateArticleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [],

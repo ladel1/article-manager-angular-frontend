@@ -23,7 +23,7 @@ export class ArticlesComponent implements OnInit {
 
 
   detail(id:number){
-    this.router.navigate(['detail-article',id]);   
+    this.router.navigate(['detail-article',id]);     
   }
 
   update(id:number){
@@ -31,7 +31,14 @@ export class ArticlesComponent implements OnInit {
   }
 
   delete(id:number){
-    console.log("delete",id)    
+    this.crudService.deleteOneArticle(id).subscribe(()=>{
+      //this.ngOnInit();
+      this.articles.forEach((value,index)=>{
+        if(value.id==id){
+          this.articles.splice(index,1);
+        }
+      })
+    });
   }
 
 

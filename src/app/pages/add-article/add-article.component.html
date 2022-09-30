@@ -1,0 +1,20 @@
+<div class="title row text-center mt-5">
+    <h2>
+        Ajouter un article
+    </h2>
+</div>
+<div class="row mt-5 text-center">
+    <div class="col-md-6 offset-md-3">
+      <form [formGroup]="articleForm" (submit)="ajouterArticle()" >
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" formControlName="nom" id="nom" >
+        </div>
+        <div class="mb-3">
+            <label for="prix" class="form-label">Prix</label>
+            <input type="text" class="form-control" formControlName="prix" id="prix" >
+        </div>
+          <button class="btn btn-primary" type="submit" >Ajouter</button>        
+      </form>
+    </div>
+</div>
