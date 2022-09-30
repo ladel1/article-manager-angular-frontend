@@ -22,6 +22,7 @@ export class AddArticleComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   ajouterArticle(){

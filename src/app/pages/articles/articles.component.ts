@@ -27,7 +27,7 @@ export class ArticlesComponent implements OnInit {
   }
 
   update(id:number){
-    console.log("update",id)    
+    this.router.navigate(['modifier-article',id]);  
   }
 
   delete(id:number){

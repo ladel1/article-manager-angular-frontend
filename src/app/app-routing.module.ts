@@ -9,7 +9,7 @@ import { UpdateArticleComponent } from './pages/update-article/update-article.co
 
 const routes: Routes = [
   {path:'ajouter-article',component:AddArticleComponent},
-  {path:'update-article/:id',component:UpdateArticleComponent},
+  {path:'modifier-article/:id',component:UpdateArticleComponent},
   {path:'detail-article/:id',component:DetailArticleComponent},
   { path:'articles',component:ArticlesComponent},
   { path:'contact', component:ContactComponent},
