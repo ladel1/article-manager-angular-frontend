@@ -3,7 +3,9 @@ export class Article{
     private nom:string="";
     private prix:number=0;
 
-     constructor(id?:number,prix?:number,nom?:string) {
+     constructor(prix:number=0,nom:string="") {
+        this.nom=nom;
+        this.prix=prix;
      }
      
      public getId():number {

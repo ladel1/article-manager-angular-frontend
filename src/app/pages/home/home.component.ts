@@ -10,15 +10,14 @@ import { CRUDService } from 'src/app/services/crud.service';
 export class HomeComponent implements OnInit {
 
   article:Article;
-  
-  constructor(
-    private crud:CRUDService,
-  ) {
+
+  constructor(private crud:CRUDService,) {
     this.article = new Article();
    }
 
   ngOnInit(): void {
-    this.crud.getOneArticle(1).subscribe((article)=>{
+    
+    this.crud.getOneArticle(4).subscribe((article)=>{// HTTP response, recieve data from API 
       Object.setPrototypeOf(article,Article.prototype);
       this.article = article;                
     }); 
